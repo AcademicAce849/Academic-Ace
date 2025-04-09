@@ -1,53 +1,59 @@
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Ace</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-export default function AcademicAce() { return ( <div className="min-h-screen bg-white text-gray-900"> <header className="p-6 shadow-md bg-blue-600 text-white"> <h1 className="text-3xl font-bold">Academic Ace</h1> <p className="text-lg">Academic writing made easy!</p> </header>
+  <!-- Header with Logo -->
+  <header class="p-6 shadow-md bg-blue-600 text-white flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <img src="logo.png" alt="Academic Ace Logo" class="h-14 w-14 rounded-full bg-white p-1">
+      <div>
+        <h1 class="text-3xl font-bold">Academic Ace</h1>
+        <p class="text-sm">Academic writing made easy!</p>
+      </div>
+    </div>
+  </header>
 
-<main className="p-6 max-w-4xl mx-auto space-y-12">
-    <section className="text-center">
-      <h2 className="text-2xl font-semibold">Struggling with essays or research papers?</h2>
-      <p className="mt-2 text-lg">
-        Academic Ace offers fast, affordable, and reliable writing help for students at all levels.
+  <!-- Main Content -->
+  <main class="p-8 space-y-10">
+    
+    <!-- About Me Section -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+      <p class="text-lg">
+        My name is Noah Mosier. I'm currently a high school senior preparing to start my freshman year of college. Over the past few years, I’ve developed strong writing skills and launched Academic Ace to help students who struggle with or don’t have time for academic writing. I used to be one of those students—but I realized the power of good writing and how essential it is for academic success. I’m here to help you make that same realization.
       </p>
-      <Button className="mt-4">Get Started</Button>
     </section>
 
+    <!-- Services Section -->
     <section>
-      <h2 className="text-xl font-bold border-b pb-2 mb-4">Services Offered</h2>
-      <ul className="list-disc pl-6 space-y-2">
+      <h2 class="text-2xl font-semibold mb-4">Services Offered</h2>
+      <ul class="list-disc list-inside text-lg space-y-1">
         <li>Academic Essays</li>
         <li>Editing and Proofreading</li>
         <li>Research Reports</li>
       </ul>
+      <p class="mt-4 text-lg">Pricing: <strong>$20 per 500 words</strong></p>
     </section>
 
+    <!-- Contact Section -->
     <section>
-      <h2 className="text-xl font-bold border-b pb-2 mb-4">Pricing</h2>
-      <p className="text-lg">$20 per 500 words</p>
-      <p className="text-sm text-gray-600">Custom quotes available for larger or ongoing projects.</p>
+      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+      <p class="text-lg">Email: <a href="mailto:mosiernoah03@gmail.com" class="text-blue-600 underline">mosiernoah03@gmail.com</a></p>
+      <p class="text-lg">Phone: <a href="tel:8047730202" class="text-blue-600 underline">(804) 773-0202</a></p>
     </section>
 
-    <section>
-      <h2 className="text-xl font-bold border-b pb-2 mb-4">About Me</h2>
-      <p>
-        Hi, I'm Noah Mosier—currently a high school senior preparing for my freshman year of college.
-        With several years of writing experience, I founded <strong>Academic Ace</strong> to help students who
-        struggle with writing or simply don’t have the time. I used to be one of those students, but over time
-        I realized how important it is to write well—and how manageable it can be with the right support.
-        My goal is to help you experience that same shift, one paper at a time.
-      </p>
-    </section>
-
-    <section>
-      <h2 className="text-xl font-bold border-b pb-2 mb-4">Contact</h2>
-      <p>Email: <a href="mailto:mosiernoah03@gmail.com" className="text-blue-600 underline">mosiernoah03@gmail.com</a></p>
-      <p>Phone: <a href="tel:+18047730202" className="text-blue-600 underline">(804) 773-0202</a></p>
-    </section>
   </main>
 
-  <footer className="p-4 text-center text-sm text-gray-500">
-    &copy; {new Date().getFullYear()} Academic Ace — academicace.solutions
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm p-4 border-t">
+    &copy; 2025 Academic Ace. All rights reserved.
   </footer>
-</div>
 
-); }
-
+</body>
+</html>
