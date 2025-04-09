@@ -1,82 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academic Ace | Affordable Academic Writing Services</title>
-
-  <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="Get top-quality academic essays, editing, and research reports at just $20 per 500 words. Created by student writer Noah Mosier to help students succeed.">
-  <meta name="keywords" content="academic writing, essay help, editing, proofreading, student writing services, affordable writing help">
-  <meta name="author" content="Noah Mosier">
-  <meta property="og:title" content="Academic Ace">
-  <meta property="og:description" content="Affordable academic writing help by a student for students.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://academicace849.github.io/Academic-Ace/logo.png">
-  <meta property="og:url" content="https://academicace.solutions">
-  <link rel="icon" href="logo.png" />
-
-  <!-- Tailwind CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Writings | Academic Ace</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Header -->
-  <header class="p-6 shadow-md bg-blue-600 text-white text-center">
-    <div class="flex flex-col items-center space-y-3">
-      <img src="logo.png" alt="Academic Ace Logo" class="h-20 w-20 rounded-full bg-white p-1">
-      <h1 class="text-4xl font-bold">Academic Ace</h1>
-      <p class="text-lg">Academic writing made easy!</p>
-    </div>
+  <header class="bg-blue-600 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">Sample Writings</h1>
+    <p class="text-sm">Preview a few examples of past academic work</p>
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-4xl mx-auto p-6 space-y-10">
-
-    <!-- About Section -->
+  <main class="max-w-4xl mx-auto p-6 space-y-8">
+    <!-- Introduction -->
     <section>
-      <h2 class="text-2xl font-semibold mb-2">About Me</h2>
-      <p class="text-lg">
-        My name is Noah Mosier. I'm currently a high school senior preparing to start my freshman year of college. Over the past few years, I’ve developed strong writing skills and launched Academic Ace to help students who struggle with or don’t have time for academic writing. I used to be one of those students—but I realized the power of good writing and how essential it is for academic success. I’m here to help you make that same realization.
-      </p>
+      <h2 class="text-2xl font-semibold mb-2">See My Work</h2>
+      <p class="text-lg mb-4">Below are automatically loaded sample essays that reflect my writing style, structure, and voice. Just upload new PDF files to the <code>samples/</code> folder and update <code>samples.json</code>.</p>
+      <div id="sample-list" class="space-y-6"></div>
     </section>
 
-    <!-- Services Section -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-2">Services Offered</h2>
-      <ul class="list-disc list-inside text-lg space-y-1">
-        <li>Academic Essays</li>
-        <li>Editing and Proofreading</li>
-        <li>Research Reports</li>
-      </ul>
-      <p class="mt-4 text-lg">Pricing: <strong>$20 per 500 words</strong></p>
-    </section>
-
-    <!-- Contact Section -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-2">Contact</h2>
-      <p class="text-lg">Email: <a href="mailto:mosiernoah03@gmail.com" class="text-blue-600 underline">mosiernoah03@gmail.com</a></p>
-      <p class="text-lg">Phone: <a href="tel:8047730202" class="text-blue-600 underline">(804) 773-0202</a></p>
-    </section>
-
-    <!-- Samples Page Link -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-2">Want to see my work?</h2>
-      <p class="text-lg">Check out my <a href="samples.html" class="text-blue-600 underline">sample writings</a>.</p>
-    </section>
-
+    <!-- Back Button -->
+    <div class="text-center mt-10">
+      <a href="index.html" class="text-blue-600 underline">← Back to Home</a>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center text-gray-500 text-sm p-4 border-t flex flex-col items-center space-y-2">
-    <div class="flex items-center space-x-4">
-      <a href="https://www.instagram.com/academic_ace25" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center space-x-1">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1 1 0 100 2 1 1 0 000-2z"/></svg>
-        <span>@academic_ace25</span>
-      </a>
-    </div>
-    <p>&copy; 2025 Academic Ace. All rights reserved.</p>
+  <footer class="text-center text-gray-500 text-sm p-4 border-t mt-10">
+    &copy; 2025 Academic Ace. All rights reserved.
   </footer>
+
+  <!-- Load JSON and generate list -->
+  <script>
+    fetch('samples/samples.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('sample-list');
+        data.forEach(sample => {
+          const html = `
+            <section class="bg-white p-4 rounded shadow">
+              <h3 class="text-xl font-semibold">${sample.title}</h3>
+              <p class="text-sm text-gray-600">Submitted: ${sample.date}</p>
+              <p class="mt-2">${sample.description}</p>
+              <a href="samples/${sample.filename}" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline">View Full PDF</a>
+            </section>
+          `;
+          container.innerHTML += html;
+        });
+      })
+      .catch(error => {
+        document.getElementById('sample-list').innerHTML = '<p class="text-red-500">Unable to load samples. Please check the JSON file.</p>';
+        console.error(error);
+      });
+  </script>
 
 </body>
 </html>
